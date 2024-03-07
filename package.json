@@ -1,0 +1,17 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "this is React form scratch by vishal",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "vishal",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
