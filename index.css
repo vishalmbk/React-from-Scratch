@@ -1,3 +1,52 @@
-#heading {
-  color: aqua;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1 solid gray;
+  border-radius: 10px;
+}
+
+.logo {
+  margin-top: 2px;
+  margin-left: 10px;
+  width: 40%;
+}
+.nav-items > ul {
+  margin-right: 10px;
+  display: flex;
+  font-size: larger;
+  list-style-type: none;
+}
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3px;
+}
+.res-card {
+  border-radius: 10px;
+  width: 200px;
+  height: 400px;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+.res-card:hover {
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.res-card > h2,
+h3,
+h4 {
+  padding: 0 5px;
+}
+.Search {
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+.res-logo {
+  width: 100%;
 }
