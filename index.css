@@ -1,8 +1,10 @@
+* {
+  background-color: rgb(245, 205, 152);
+}
 .header {
   display: flex;
   justify-content: space-between;
   border: 1 solid gray;
-  border-radius: 10px;
 }
 
 .logo {
@@ -22,24 +24,27 @@
 }
 .res-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 3px;
+  margin: 15px;
 }
 .res-card {
+  border: 1px solid gray;
   border-radius: 10px;
   width: 200px;
-  height: 400px;
+  /* height: 400px; */
   padding: 5px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
 }
 .res-card:hover {
-  border: 1px solid gray;
+  border: 3px solid gray;
   cursor: pointer;
 }
 .res-card > h2,
 h3,
-h4 {
-  padding: 0 5px;
+h4,
+h6 {
+  padding: 1px 5px;
 }
 .Search {
   border: 1px solid gray;

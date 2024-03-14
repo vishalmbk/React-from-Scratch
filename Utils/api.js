@@ -1,76 +1,5 @@
-//- food app -
-//- *Header* -
-//  - nav logo
-//  - nav items
-//     -home,about,contact,cart
-//- *body* -
-//  -Search
-//  -RestraurentContainer
-//     -resCard
-//       -img
-//       -Name of res, star ratings, cuisine ,etc
-//- *Footer* -
-//  - copyrights
-//  -Links
-//  -Address
-//  -Contact
-
-import React from "react";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://cdn.vectorstock.com/i/preview-1x/73/82/food-logo-vector-38377382.jpg"
-          alt="Logo"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-const RestaurentCard = (props) => {
-  // console.log(props.resData.info.name);
-  const {
-    name,
-    cuisines,
-    avgRating,
-    cloudinaryImageId,
-    costForTwo,
-    totalRatingsString,
-  } = props?.resData?.info;
-
-  return (
-    <div className="res-container">
-      <div className="res-card">
-        <img
-          className="res-logo"
-          src={
-            "https://media-assets.swiggy.com/swiggy/image/upload/h_500,w_500/" +
-            cloudinaryImageId
-          }
-        />
-        <h3>{name}</h3>
-        <h3>{cuisines.join(", ")}</h3>
-        <h4>{avgRating} stars...</h4>
-        <h6>{totalRatingsString} Total Ratings</h6>
-        <h4>{costForTwo}</h4>
-      </div>
-    </div>
-  );
-};
-
-const Body = () => {
-  const resList = [
+const resList = {
+  restaurants: [
     {
       info: {
         id: "427774",
@@ -1419,26 +1348,5 @@ const Body = () => {
         type: "WEBLINK",
       },
     },
-  ];
-
-  return (
-    <div className="body">
-      <div className="Search">Search</div>
-      <div className="res-container">
-        {resList.map((restaurent) => (
-          <RestaurentCard key={restaurent.info.id} resData={restaurent} />
-        ))}
-      </div>
-    </div>
-  );
+  ],
 };
-
-const FoodApp = () => {
-  return (
-    <>
-      <Header />
-      <Body />
-    </>
-  );
-};
-export default FoodApp;
